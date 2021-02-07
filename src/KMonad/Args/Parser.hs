@@ -302,10 +302,14 @@ itokenP = choice . map try $
 
 -- | Parse an output token
 otokenP :: Parser OToken
-otokenP = choice . map try $
-  [ statement "uinput-sink"     $ KUinputSink <$> lexeme textP <*> optional textP
-  , statement "send-event-sink" $ KSendEventSink <$> lexeme numP <*> lexeme numP
-  , statement "kext"            $ pure KKextSink]
+otokenP = choice . map (try . uncurry statement) $ otokens
+
+-- -- | Output tokens to parse; the format is @(keyword, how to parse the token)@
+otokens :: [(Text, Parser OToken)]
+otokens =
+  [ ("uinput-sink"    , KUinputSink <$> lexeme textP <*> optional textP)
+  , ("send-event-sink", KSendEventSink <$> lexeme numP <*> lexeme numP)
+  , ("kext"           , pure KKextSink)]
 
 -- | Parse the DefCfg token
 defcfgP :: Parser DefSettings
