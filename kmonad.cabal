@@ -2,7 +2,7 @@ cabal-version: 2.2
 
 name:           kmonad
 category:       Application
-version:        0.4
+version:        0.4.1
 synopsis:       Advanced keyboard remapping utility
 author:         David Janssen
 maintainer:     janssen.dhj@gmail.com
@@ -15,6 +15,9 @@ description:
   mapping is highly configurable, and provides options like (transparent) layer
   overlays, tap-mod buttons, multi-tap buttons, leader-key style buttons, and
   keyboard macros. Functionality heavily inspired by the QMK-firmware.
+
+extra-source-files:
+    changelog.md
 
 library
   default-language:
@@ -103,24 +106,25 @@ library
     build-depends:
       Win32
 
-  -- if os(darwin)
-  --   exposed-modules:
-  --     KMonad.Keyboard.IO.Mac.IOKitSource
-  --     KMonad.Keyboard.IO.Mac.KextSink
-  --     KMonad.Keyboard.IO.Mac.Types
-  --   cxx-sources:
-  --     c_src/mac/keyio_mac.cpp
-  --   cxx-options:
-  --     -std=c++14
-  --   include-dirs:
-  --     c_src/mac/Karabiner-VirtualHIDDevice/dist/include
-  --   extra-libraries:
-  --     c++
-  --   build-depends:
-  --     unix
-  --   frameworks:
-  --     CoreFoundation
-  --     IOKit
+  if os(darwin)
+    exposed-modules:
+      KMonad.Keyboard.IO.Mac.IOKitSource
+      KMonad.Keyboard.IO.Mac.KextSink
+      KMonad.Keyboard.IO.Mac.Types
+    cxx-sources:
+      c_src/mac/keyio_mac.cpp
+    cxx-options:
+      -std=c++14
+    -- Commenting out, interferes with Hackage
+    -- include-dirs:
+    --   c_src/mac/Karabiner-VirtualHIDDevice/dist/include
+    extra-libraries:
+      c++
+    build-depends:
+      unix
+    frameworks:
+      CoreFoundation
+      IOKit
 
 executable kmonad
   ghc-options:
