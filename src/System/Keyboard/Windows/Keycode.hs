@@ -1,4 +1,4 @@
-module KMonad.Keyboard.Windows.Keycode
+module System.Keyboard.Windows.Keycode
   ( Keycode
   , _RawName
   , osKeynames
@@ -11,7 +11,7 @@ import KMonad.Prelude
 
 import RIO.Text (unpack)
 
-import KMonad.Keyboard.Keycode
+import System.Keyboard.Keycode
 
 --------------------------------------------------------------------------------
 -- $code

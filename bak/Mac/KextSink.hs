@@ -1,4 +1,4 @@
-module KMonad.Keyboard.IO.Mac.KextSink
+module System.Keyboard.IO.Mac.KextSink
   ( kextSink
   )
 where
@@ -9,9 +9,9 @@ import Foreign.Ptr
 import Foreign.Marshal
 import Foreign.Storable
 
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
-import KMonad.Keyboard.IO.Mac.Types
+import System.Keyboard
+import System.Keyboard.IO
+import System.Keyboard.IO.Mac.Types
 
 foreign import ccall "send_key"
   send_key :: Ptr MacKeyEvent -> IO ()

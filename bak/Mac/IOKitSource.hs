@@ -1,4 +1,4 @@
-module KMonad.Keyboard.IO.Mac.IOKitSource
+module System.Keyboard.IO.Mac.IOKitSource
   ( iokitSource
   )
 where
@@ -10,9 +10,9 @@ import Foreign.Ptr
 import Foreign.Storable
 import Foreign.C.String
 
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
-import KMonad.Keyboard.IO.Mac.Types
+import System.Keyboard
+import System.Keyboard.IO
+import System.Keyboard.IO.Mac.Types
 
 --------------------------------------------------------------------------------
 

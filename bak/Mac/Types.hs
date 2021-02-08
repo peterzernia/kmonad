@@ -1,4 +1,4 @@
-module KMonad.Keyboard.IO.Mac.Types
+module System.Keyboard.IO.Mac.Types
   ( MacError(..)
   , MacKeyEvent
   , mkMacKeyEvent
@@ -11,7 +11,7 @@ where
 import KMonad.Prelude
 
 import Foreign.Storable
-import KMonad.Keyboard
+import System.Keyboard
 
 import qualified RIO.HashMap as M
 

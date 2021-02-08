@@ -4,7 +4,7 @@ where
 
 import KMonad.Prelude
 
-import KMonad.Keyboard
+import System.Keyboard
 
 import qualified Data.LayerStack as Ls
 

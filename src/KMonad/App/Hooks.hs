@@ -29,7 +29,7 @@ import Data.Time.Clock.System
 import Data.Unique
 
 import KMonad.Action hiding (register)
-import KMonad.Keyboard
+import System.Keyboard
 import KMonad.Util
 
 import RIO.Partial (fromJust)

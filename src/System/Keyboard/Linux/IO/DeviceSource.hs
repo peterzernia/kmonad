@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveAnyClass #-}
 {-|
-Module      : KMonad.Keyboard.Linux.IO.DeviceSource
+Module      : System.Keyboard.Linux.IO.DeviceSource
 Description : Load and acquire a linux /dev/input device
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -8,7 +8,7 @@ Maintainer  : janssen.dhj@gmail.com
 Stability   : experimental
 Portability : portable
 -}
-module KMonad.Keyboard.Linux.IO.DeviceSource
+module System.Keyboard.Linux.IO.DeviceSource
   ( deviceSource
   , deviceSource64
 
@@ -21,9 +21,9 @@ import KMonad.Prelude
 import Foreign.C.Types
 import System.Posix
 
-import KMonad.Keyboard.IO
-import KMonad.Keyboard.Types
-import KMonad.Keyboard.Linux.Types
+import System.Keyboard.IO
+import System.Keyboard.Types
+import System.Keyboard.Linux.Types
 import KMonad.Util
 
 import qualified Data.Serialize as B (decode)

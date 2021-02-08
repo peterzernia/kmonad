@@ -62,6 +62,10 @@ library
   exposed-modules:
       Data.LayerStack
       Data.MultiMap
+      System.Keyboard
+      System.Keyboard.Keycode
+      System.Keyboard.IO
+      System.Keyboard.Types
       KMonad.Action
       KMonad.App
       KMonad.App.BEnv
@@ -76,20 +80,16 @@ library
       KMonad.Args.Types
       KMonad.Button
       KMonad.Layer
-      KMonad.Keyboard
-      KMonad.Keyboard.Keycode
-      KMonad.Keyboard.IO
-      KMonad.Keyboard.Types
       KMonad.Parser.Keyboard.ComposeSeq
       KMonad.Prelude
       KMonad.Util
 
   if os(linux)
     exposed-modules:
-      KMonad.Keyboard.Linux.Keycode
-      KMonad.Keyboard.Linux.Types
-      KMonad.Keyboard.Linux.IO.DeviceSource
-      KMonad.Keyboard.Linux.IO.UinputSink
+      System.Keyboard.Linux.Keycode
+      System.Keyboard.Linux.Types
+      System.Keyboard.Linux.IO.DeviceSource
+      System.Keyboard.Linux.IO.UinputSink
     c-sources:
       c_src/keyio.c
     build-depends:
@@ -97,10 +97,10 @@ library
 
   if os(windows)
     exposed-modules:
-      KMonad.Keyboard.Windows.Keycode
-      KMonad.Keyboard.Windows.Types
-      KMonad.Keyboard.Windows.IO.LowLevelHookSource
-      KMonad.Keyboard.Windows.IO.SendEventSink
+      System.Keyboard.Windows.Keycode
+      System.Keyboard.Windows.Types
+      System.Keyboard.Windows.IO.LowLevelHookSource
+      System.Keyboard.Windows.IO.SendEventSink
     c-sources:
       c_src/keyio_win.c
     build-depends:
@@ -108,9 +108,9 @@ library
 
   if os(darwin)
     exposed-modules:
-      KMonad.Keyboard.IO.Mac.IOKitSource
-      KMonad.Keyboard.IO.Mac.KextSink
-      KMonad.Keyboard.IO.Mac.Types
+      System.Keyboard.IO.Mac.IOKitSource
+      System.Keyboard.IO.Mac.KextSink
+      System.Keyboard.IO.Mac.Types
     cxx-sources:
       c_src/mac/keyio_mac.cpp
     cxx-options:

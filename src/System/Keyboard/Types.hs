@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -Wno-orphans #-}
 {-# LANGUAGE DeriveAnyClass, CPP #-}
 {-|
-Module      : KMonad.Keyboard.Types
+Module      : System.Keyboard.Types
 Description : Basic keyboard types
 Copyright   : (c) David Janssen, 2020
 License     : MIT
@@ -29,7 +29,7 @@ key is detected ('KeyEvent'), that key's button is looked up, and it's state is
 similarly changed.
 
 -}
-module KMonad.Keyboard.Types
+module System.Keyboard.Types
   ( -- * Keycode
     -- $code
     Keycode
@@ -65,7 +65,7 @@ where
 
 import KMonad.Prelude
 
-import KMonad.Keyboard.Keycode
+import System.Keyboard.Keycode
 import KMonad.Util
 
 import qualified RIO.HashMap as M
@@ -73,11 +73,11 @@ import qualified RIO.HashSet as S
 import qualified RIO.Text    as T
 
 #ifdef linux_HOST_OS
-import KMonad.Keyboard.Linux.Keycode
+import System.Keyboard.Linux.Keycode
 #endif
 
 #ifdef mingw32_HOST_OS
-import KMonad.Keyboard.Windows.Keycode
+import System.Keyboard.Windows.Keycode
 #endif
 
 

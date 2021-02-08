@@ -1,5 +1,5 @@
 {-|
-Module      : KMonad.Keyboard.Windows.Types
+Module      : System.Keyboard.Windows.Types
 Description : The Windows-specific representation of KeyEvent.
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -11,7 +11,7 @@ NOTE: The representation here lines up with the @keyio_win.c@ module, not with
 Windows in general. There is some translation happening in the c-code.
 
 -}
-module KMonad.Keyboard.Windows.Types
+module System.Keyboard.Windows.Types
   -- ( WinKeySwitch
   -- , _WinKeySwitch
   -- )
@@ -21,7 +21,7 @@ where
 import KMonad.Prelude
 
 import Foreign.Storable
-import KMonad.Keyboard.Types
+import System.Keyboard.Types
 
 -- FIXME: Better error-handling
 

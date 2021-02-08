@@ -23,8 +23,8 @@ import RIO.Text (unpack)
 
 import KMonad.Action
 import KMonad.Button
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
+import System.Keyboard
+import System.Keyboard.IO
 import KMonad.Layer
 import KMonad.Util
 import KMonad.App.BEnv

@@ -12,7 +12,7 @@ can have multiple values (but no duplicates). Additionally, we provide some
 operations to reverse this mapping.
 
 In KMonad we use this exclusively to easily define multiple names for the same
-'KMonad.Keyboard.Keycode' in a reversible manner.
+'System.Keyboard.Keycode' in a reversible manner.
 
 -}
 module Data.MultiMap

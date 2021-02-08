@@ -45,8 +45,8 @@ module KMonad.Args.Types
 import KMonad.Prelude
 
 import KMonad.Button
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
+import System.Keyboard
+import System.Keyboard.IO
 import KMonad.Layer
 import KMonad.Util
 

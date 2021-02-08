@@ -1,5 +1,5 @@
 {-|
-Module      : KMonad.Keyboard.Windows.IO.SendEventSink
+Module      : System.Keyboard.Windows.IO.SendEventSink
 Description : Using Windows' send_event functionality to inject KeyEvent's
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -11,7 +11,7 @@ This uses @sendKey@ from the @keyio_win.c@ to send keys to Windows. This itself
 then uses the Windows 'SendInput' system call.
 
 -}
-module KMonad.Keyboard.Windows.IO.SendEventSink
+module System.Keyboard.Windows.IO.SendEventSink
   ( sendEventKeySink
   )
 where
@@ -22,9 +22,9 @@ import Foreign.Ptr
 import Foreign.Marshal hiding (void)
 import Foreign.Storable
 
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
-import KMonad.Keyboard.Windows.Types
+import System.Keyboard
+import System.Keyboard.IO
+import System.Keyboard.Windows.Types
 import KMonad.Util
 
 import qualified RIO.HashMap as M

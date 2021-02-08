@@ -21,7 +21,7 @@ them, please note this in the pull-request.
   module, 'document' this by importing only that function. Once you exceed 3
   functions or so, it is probably clearer to just import the entire module.
 - Make sure the code compiles without warnings. If a particular warning is
-  inevitable (orphan-instances, for example, in "KMonad.Keyboard.Types")
+  inevitable (orphan-instances, for example, in "System.Keyboard.Types")
   explicitly silence it at the top of the module.
 ## Documentation
 This is very important.
@@ -42,7 +42,7 @@ This is very important.
   document how you use the function in the docstring. (for example, `manyToOne`
   in "KMonad.Util")
 - If you write a complicated lens-chain (> 2), consider documenting it clearly,
-  like `keynames` in "KMonad.Keyboard.Linux.Keycode"
+  like `keynames` in "System.Keyboard.Linux.Keycode"
 
 ## Aesthetics
 All of the points here are not that important.

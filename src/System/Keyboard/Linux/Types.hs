@@ -1,5 +1,5 @@
 {-|
-Module      : KMonad.Keyboard.Linux.Types
+Module      : System.Keyboard.Linux.Types
 Description : The types particular to Linux keyboards
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -9,7 +9,7 @@ Stability   : experimental
 Portability : non-portable (MPTC with FD, FFI to Linux-only c-code)
 
 -}
-module KMonad.Keyboard.Linux.Types
+module System.Keyboard.Linux.Types
   ( -- * The LinuxEvent datatype, its constructors, and instances
     -- $types
     LinuxEvent(..)
@@ -21,7 +21,7 @@ where
 
 import KMonad.Prelude
 
-import KMonad.Keyboard.Types
+import System.Keyboard.Types
 import KMonad.Util
 
 --------------------------------------------------------------------------------

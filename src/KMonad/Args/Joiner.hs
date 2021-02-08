@@ -30,23 +30,23 @@ import KMonad.Args.Types
 
 import KMonad.Action
 import KMonad.Button
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
+import System.Keyboard
+import System.Keyboard.IO
 import KMonad.Layer
 
 #ifdef linux_HOST_OS
-import KMonad.Keyboard.Linux.IO.DeviceSource
-import KMonad.Keyboard.Linux.IO.UinputSink
+import System.Keyboard.Linux.IO.DeviceSource
+import System.Keyboard.Linux.IO.UinputSink
 #endif
 
 #ifdef mingw32_HOST_OS
-import KMonad.Keyboard.Windows.IO.LowLevelHookSource
-import KMonad.Keyboard.Windows.IO.SendEventSink
+import System.Keyboard.Windows.IO.LowLevelHookSource
+import System.Keyboard.Windows.IO.SendEventSink
 #endif
 
 #ifdef darwin_HOST_OS
-import KMonad.Keyboard.IO.Mac.IOKitSource
-import KMonad.Keyboard.IO.Mac.KextSink
+import System.Keyboard.IO.Mac.IOKitSource
+import System.Keyboard.IO.Mac.KextSink
 #endif
 
 import Control.Monad.Except

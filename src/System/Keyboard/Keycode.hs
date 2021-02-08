@@ -1,5 +1,5 @@
 {-|
-Module      : KMonad.Keyboard.Keycode
+Module      : System.Keyboard.Keycode
 Description : OS-agnostic 'Keycode' specifications
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -8,13 +8,13 @@ Maintainer  : janssen.dhj@gmail.com
 Stability   : experimental
 Portability : non-portable (MPTC with FD, FFI to Linux-only c-code)
 
-NOTE: Ideally we'd like to have this be part of "KMonad.Keyboard.Types", but
+NOTE: Ideally we'd like to have this be part of "System.Keyboard.Types", but
 we'd get a circular import because:
-- "KMonad.Keyboard.Types" requires OS-specific Keycode import
+- "System.Keyboard.Types" requires OS-specific Keycode import
 - OS-specific Keycode import required this module
 -}
 
-module KMonad.Keyboard.Keycode
+module System.Keyboard.Keycode
   ( Keyname
   , Alias
   , aliases

@@ -42,7 +42,7 @@ module KMonad.App.Dispatch
 where
 
 import KMonad.Prelude
-import KMonad.Keyboard
+import System.Keyboard
 
 import RIO.Seq (Seq(..), (><))
 import qualified RIO.Seq  as Seq

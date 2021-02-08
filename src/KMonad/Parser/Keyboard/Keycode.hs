@@ -1,5 +1,5 @@
 {-# LANGUAGE CPP #-}
-module KMonad.Keyboard.Keycode
+module System.Keyboard.Keycode
   ( Keycode
   )
 where
@@ -7,7 +7,7 @@ where
 import KMonad.Prelude
 
 #ifdef linux_HOST_OS
-import KMonad.Keyboard.Linux.Keycode (Keycode, codeNames)
+import System.Keyboard.Linux.Keycode (Keycode, codeNames)
 #endif
 
 --------------------------------------------------------------------------------

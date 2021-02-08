@@ -1,5 +1,5 @@
 {-|
-Module      : KMonad.Keyboard.Windows.IO.LowLevelHookSource
+Module      : System.Keyboard.Windows.IO.LowLevelHookSource
 Description : Load and acquire a windows low-level keyboard hook.
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -8,7 +8,7 @@ Stability   : experimental
 Portability : portable
 
 -}
-module KMonad.Keyboard.Windows.IO.LowLevelHookSource
+module System.Keyboard.Windows.IO.LowLevelHookSource
   ( llHook
   )
 where
@@ -19,9 +19,9 @@ import Foreign.Marshal hiding (void)
 import Foreign.Ptr
 import Foreign.Storable
 
-import KMonad.Keyboard
-import KMonad.Keyboard.IO
-import KMonad.Keyboard.Windows.Types
+import System.Keyboard
+import System.Keyboard.IO
+import System.Keyboard.Windows.Types
 import KMonad.Util (now)
 
 --------------------------------------------------------------------------------

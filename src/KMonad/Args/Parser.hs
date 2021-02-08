@@ -34,7 +34,7 @@ where
 import KMonad.Prelude hiding (try, bool)
 
 import KMonad.Args.Types
-import KMonad.Keyboard
+import System.Keyboard
 import KMonad.Parser.Keyboard.ComposeSeq
 
 import Data.Char

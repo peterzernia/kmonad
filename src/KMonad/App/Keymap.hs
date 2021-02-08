@@ -26,7 +26,7 @@ import KMonad.Prelude
 
 import KMonad.Action hiding (layerOp)
 import KMonad.Button
-import KMonad.Keyboard
+import System.Keyboard
 import KMonad.Layer
 import KMonad.App.BEnv
 
