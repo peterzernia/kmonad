@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveAnyClass #-}
 {-|
-Module      : System.Keyboard.Linux.IO.UinputSink
+Module      : KMonad.Keyboard.Linux.IO.UinputSink
 Description : Using Linux's uinput interface to emit events
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -8,7 +8,7 @@ Maintainer  : janssen.dhj@gmail.com
 Stability   : experimental
 Portability : portable
 -}
-module System.Keyboard.Linux.IO.UinputSink
+module KMonad.Keyboard.Linux.IO.UinputSink
   ( UinputSink
   , UinputCfg(..)
   , HasUinputCfg(..)
@@ -25,9 +25,9 @@ import System.Posix
 import UnliftIO.Async   (async)
 import UnliftIO.Process (callCommand)
 
-import System.Keyboard.IO
-import System.Keyboard.Types
-import System.Keyboard.Linux.Types
+import KMonad.Keyboard.IO
+import KMonad.Keyboard.Types
+import KMonad.Keyboard.Linux.Types
 import KMonad.Util
 
 --------------------------------------------------------------------------------

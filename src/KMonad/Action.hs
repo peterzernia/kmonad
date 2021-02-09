@@ -60,7 +60,7 @@ where
 
 import KMonad.Prelude hiding (timeout)
 
-import System.Keyboard
+import KMonad.Keyboard
 import KMonad.Layer
 import KMonad.Util
 

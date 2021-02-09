@@ -4,9 +4,9 @@ where
 
 import KMonad.Prelude
 
-import System.Keyboard
+import KMonad.Keyboard
 
-import qualified Data.LayerStack as Ls
+import qualified KMonad.App.LayerStack as Ls
 
 -- | Layers are identified by a tag that is simply a 'Text' value.
 type LayerTag = Text

@@ -26,11 +26,11 @@ import KMonad.Prelude
 
 import KMonad.Action hiding (layerOp)
 import KMonad.Button
-import System.Keyboard
+import KMonad.Keyboard
 import KMonad.Layer
 import KMonad.App.BEnv
 
-import qualified Data.LayerStack as Ls
+import qualified KMonad.App.LayerStack as Ls
 
 --------------------------------------------------------------------------------
 -- $env

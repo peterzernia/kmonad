@@ -23,7 +23,7 @@ where
 
 import KMonad.Prelude
 
-import System.Keyboard
+import KMonad.Keyboard
 
 --------------------------------------------------------------------------------
 -- $env

@@ -1,5 +1,5 @@
 {-|
-Module      : System.Keyboard.IO
+Module      : KMonad.Keyboard.IO
 Description : The logic behind sending and receiving key events to the OS
 Copyright   : (c) David Janssen, 2019
 License     : MIT
@@ -9,7 +9,7 @@ Stability   : experimental
 Portability : non-portable (MPTC with FD, FFI to Linux-only c-code)
 
 -}
-module System.Keyboard.IO
+module KMonad.Keyboard.IO
   ( -- * KeySink: send keyboard events to the OS
     -- $snk
     KeySink
@@ -25,8 +25,8 @@ where
 
 import KMonad.Prelude
 
--- import System.Keyboard
-import System.Keyboard.Types
+-- import KMonad.Keyboard
+import KMonad.Keyboard.Types
 import KMonad.Util
 
 import qualified RIO.Text as T

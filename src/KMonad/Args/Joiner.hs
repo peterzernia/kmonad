@@ -30,30 +30,30 @@ import KMonad.Args.Types
 
 import KMonad.Action
 import KMonad.Button
-import System.Keyboard
-import System.Keyboard.IO
+import KMonad.Keyboard
+import KMonad.Keyboard.IO
 import KMonad.Layer
 
 #ifdef linux_HOST_OS
-import System.Keyboard.Linux.IO.DeviceSource
-import System.Keyboard.Linux.IO.UinputSink
+import KMonad.Keyboard.Linux.IO.DeviceSource
+import KMonad.Keyboard.Linux.IO.UinputSink
 #endif
 
 #ifdef mingw32_HOST_OS
-import System.Keyboard.Windows.IO.LowLevelHookSource
-import System.Keyboard.Windows.IO.SendEventSink
+import KMonad.Keyboard.Windows.IO.LowLevelHookSource
+import KMonad.Keyboard.Windows.IO.SendEventSink
 #endif
 
 #ifdef darwin_HOST_OS
-import System.Keyboard.IO.Mac.IOKitSource
-import System.Keyboard.IO.Mac.KextSink
+import KMonad.Keyboard.IO.Mac.IOKitSource
+import KMonad.Keyboard.IO.Mac.KextSink
 #endif
 
 import Control.Monad.Except
 
 import RIO.List (uncons, headMaybe)
 import RIO.Partial (fromJust)
-import qualified Data.LayerStack  as L
+import qualified KMonad.App.LayerStack  as L
 import qualified RIO.HashMap      as M
 import qualified RIO.Text         as T
 

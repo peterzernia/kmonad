@@ -52,7 +52,7 @@ where
 import KMonad.Prelude
 
 import KMonad.Action
-import System.Keyboard
+import KMonad.Keyboard
 import KMonad.Layer
 import KMonad.Util
 

@@ -1,39 +1,31 @@
-{-|
-Module      : System.Keyboard.Keycode
-Description : OS-agnostic 'Keycode' specifications
-Copyright   : (c) David Janssen, 2019
-License     : MIT
+module KMonad.Parser.Keycode.Aliases
 
-Maintainer  : janssen.dhj@gmail.com
-Stability   : experimental
-Portability : non-portable (MPTC with FD, FFI to Linux-only c-code)
-
-NOTE: Ideally we'd like to have this be part of "System.Keyboard.Types", but
-we'd get a circular import because:
-- "System.Keyboard.Types" requires OS-specific Keycode import
-- OS-specific Keycode import required this module
--}
-
-module System.Keyboard.Keycode
-  ( Keyname
-  , Alias
-  , aliases
-  )
 where
-
 
 import KMonad.Prelude
 
--- | 'Keyname' is just a type-alias for Text, for coding clarity.
-type Keyname = Text
+import KMonad.Keyboard
 
--- | Used to define name-to-name correspondences here
+import qualified RIO.HashMap as M
+
+-- | A map of keycode names to 'Keycode's.
 --
--- _1 : The 'core' name used by the actual lookup
--- _2 : A list of other names that should reference the same keycode
---
--- FIXME : We do not check for nor make guarantees about duplicate names.
-type Alias = (Keyname, [Keyname])
+-- This is combination of the OS-specific keycode names defined in their respective
+keyNames :: M.HashMap Text Keycode
+keyNames = undefined
+
+
+
+-- aliases :: [(Text, [Text])]
+-- aliases =
+--   [ ("esc",  ["escape"])
+--   , ("-",    ["minus", "min"])
+--   , ("=",    ["equal", "eq", "eql"])
+--   , ("slp",  ["zzz"])
+--   , ("spc",  ["space"])
+--   , ("pgup", ["pageup"])
+--   , ("pgdn", ["pagedn", "pagedown"])
+--   ]
 
 -- | A name-to-name mapping defining 'Keycode' aliases.
 aliases :: [Alias]
@@ -56,7 +48,7 @@ aliases =
   , ("lsft", ["sft", "shft", "lshift"])
   , ("`",    ["grv"])
 
- 
+
   -- TODO: CONTINUE monkeywork HERE
   -- , (KeyRightAlt,       ["ralt"])
   -- , (KeyCompose,        ["comp", "cmps", "cmp"])
