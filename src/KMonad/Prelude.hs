@@ -12,6 +12,12 @@ Portability : non-portable (MPTC with FD, FFI to Linux-only c-code)
 
 module KMonad.Prelude
   ( module X
+  , HasTime(..)
+  , now
+  , systemTime
+  , fi
+  , onErr
+  , onJust
   )
 where
 
@@ -40,3 +46,32 @@ import RIO as X hiding
   , some, many
   )
 
+
+-- | Class for all data that contains a time value
+class HasTime e where
+  time :: Lens' e UTCTime
+
+-- | Fill in a time argument with the current time
+now :: MonadIO m => (UTCTime -> a) -> m a
+now = flip fmap getCurrentTime
+
+-- | An 'Iso' between 'UTCTime' and 'SystemTime'
+systemTime :: Iso' UTCTime SystemTime
+systemTime = iso utcToSystemTime systemToUTCTime
+
+-- | Used so often so we provide a shorthand
+fi :: (Integral a, Num b) => a -> b
+fi = fromIntegral
+
+-- | A helper function that helps to throw errors when a return code is -1.
+-- Easiest when used as infix like this:
+--
+-- > someFFIcall `onErr` MyCallFailedError someData
+--
+-- onErr :: (MonadUnliftIO m, Exception e) => m Int -> e -> m ()
+onErr :: (MonadIO m, Exception e) => m Int -> e -> m ()
+onErr a err = a >>= \ret -> when (ret == -1) $ throwIO err
+
+onJust :: Monad m => (a -> m b) -> Maybe a -> m (Maybe b)
+onJust _ Nothing  = pure Nothing
+onJust f (Just a) = Just <$> f a
